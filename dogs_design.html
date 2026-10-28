@@ -784,6 +784,85 @@
       font-weight: 900;
     }
 
+    /* Playtime */
+    .playtime {
+      padding: 110px 0;
+      background: #f5efe2;
+    }
+
+    .playtime-grid {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 80px;
+    }
+
+    .playtime-visual {
+      position: relative;
+      min-height: 490px;
+    }
+
+    .playtime-photo {
+      width: 90%;
+      height: 460px;
+      overflow: hidden;
+      border: 9px solid white;
+      border-radius: 34px 34px 34px 110px;
+      background: #dfead8;
+      box-shadow: var(--shadow);
+      transform: rotate(-2deg);
+    }
+
+    .playtime-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .playtime-note {
+      position: absolute;
+      right: 0;
+      bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 19px;
+      border-radius: 18px;
+      background: white;
+      box-shadow: var(--shadow);
+      transform: rotate(2deg);
+    }
+
+    .playtime-note-icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      border-radius: 14px;
+      background: #fff1d2;
+      font-size: 1.35rem;
+    }
+
+    .playtime-note strong,
+    .playtime-note small {
+      display: block;
+    }
+
+    .playtime-note small {
+      color: var(--muted);
+      font-size: .76rem;
+    }
+
+    .playtime-copy {
+      margin: 22px 0 30px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .playtime .eyebrow {
+      color: var(--orange-dark);
+    }
+
     /* Reviews */
     .reviews {
       padding: 120px 0;
@@ -1159,7 +1238,8 @@
       }
 
       .hero-grid,
-      .about-grid {
+      .about-grid,
+      .playtime-grid {
         grid-template-columns: 1fr;
         gap: 55px;
       }
@@ -1188,6 +1268,11 @@
       }
 
       .about-images {
+        width: min(670px, 100%);
+        margin: auto;
+      }
+
+      .playtime-visual {
         width: min(670px, 100%);
         margin: auto;
       }
@@ -1300,7 +1385,8 @@
 
       .menu-section,
       .reviews,
-      .about {
+      .about,
+      .playtime {
         padding: 85px 0;
       }
 
@@ -1341,6 +1427,27 @@
 
       .about-small {
         height: 170px;
+      }
+
+      .playtime-grid {
+        gap: 35px;
+      }
+
+      .playtime-visual {
+        min-height: 350px;
+      }
+
+      .playtime-photo {
+        width: 91%;
+        height: 330px;
+        border-width: 7px;
+        border-bottom-left-radius: 75px;
+      }
+
+      .playtime-note {
+        right: 0;
+        bottom: 8px;
+        padding: 12px 14px;
       }
 
       .review-card.featured {
@@ -1411,6 +1518,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#menu">The Menu</a></li>
         <li><a href="#about">Our Story</a></li>
+        <li><a href="#playtime">Playtime</a></li>
         <li><a href="#reviews">Happy Tails</a></li>
         <li><a href="#reserve" class="btn btn-primary">Book a Table</a></li>
       </ul>
@@ -1642,6 +1750,27 @@
       </div>
     </section>
 
+    <section class="playtime" id="playtime">
+      <div class="container playtime-grid">
+        <div class="playtime-visual reveal">
+          <div class="playtime-photo">
+            <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=1000&q=88" alt="A dog enjoying a playful moment outdoors">
+          </div>
+          <div class="playtime-note">
+            <span class="playtime-note-icon" aria-hidden="true">🎾</span>
+            <div><strong>Best served together</strong><small>One more throw, one more tail wag</small></div>
+          </div>
+        </div>
+
+        <div class="playtime-content reveal">
+          <span class="eyebrow">Good times, good dogs</span>
+          <h2>Make room for a little play.</h2>
+          <p class="playtime-copy">The best days have a little room to run, a favorite toy, and your person right there cheering you on. Take a playful pause together, then settle in for a well-earned bite.</p>
+          <a class="btn btn-primary" href="#reserve">Plan your visit <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
     <section class="reviews" id="reviews">
       <div class="container">
         <div class="reviews-head reveal">
@@ -1760,6 +1889,7 @@
         <ul>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#about">Our story</a></li>
+          <li><a href="#playtime">Playtime</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#reserve">Reservations</a></li>
         </ul>
